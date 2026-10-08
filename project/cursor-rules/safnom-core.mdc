@@ -1,0 +1,16 @@
+---
+description: Safnom stack, scope, and token-efficient workflow
+alwaysApply: true
+---
+
+# Safnom core
+
+**Stack:** Next.js + Tailwind (`frontend/`), Express + TS + Mongoose (`backend/`), REST `/api/v1`. Modular monolith only — no Kafka/K8s/Redis/GraphQL unless already required.
+
+**Modules:** `backend/src/modules/<name>/` — routes, controller, service, model, types, index. Config via env; never commit `.env`. Use `workspaceId` on resources; no full workspace product unless asked.
+
+**Scope:** Steps 1–8 shipped (through preview). No publishing/domains unless the user asks. Minimal diffs; match existing patterns; no drive-by refactors or extra docs.
+
+**Reads:** grep/glob first; read one module at a time. Skip `node_modules/`, `backend/data/`, build output, lockfiles. Plans: `project/plan/README.md` → open **one** step folder; do not edit plan files unless requested.
+
+**Verify:** backend → `cd backend && npm run typecheck` (+ targeted tests). frontend → `cd frontend && npm run build`. No API keys in chat or `.env.example`. In-app AI uses `backend/.env` (`AI_PROVIDER`, `AI_API_KEY`).

@@ -1,0 +1,20 @@
+---
+description: Backend module structure and Express patterns
+globs: backend/**/*.ts
+alwaysApply: false
+---
+
+# Backend modules
+
+Each module under `backend/src/modules/` should include:
+
+- `*.routes.ts` — Express Router, mount paths only
+- `*.controller.ts` — req/res handling, use `sendSuccess` / throw `AppError`
+- `*.service.ts` — business logic
+- `*.model.ts` — Mongoose schemas
+- `*.types.ts` — interfaces and DTOs
+- `index.ts` — re-exports
+
+Use centralized error middleware and `backend/src/utils/apiResponse.ts` for consistent JSON.
+
+Log with the shared logger in `backend/src/utils/logger.ts`.

@@ -1,0 +1,7 @@
+# Safnom V1
+
+Onboarding: `project/AGENTS.md` · Plans: `project/plan/README.md` (one step folder).
+
+Cursor: `.cursor/rules/safnom-core.mdc` (always) + path rules for `frontend/`, `backend/`, `project/plan/` · Ignore: `.cursorignore`.
+
+Stack: Next.js + Tailwind (`frontend/`), Express + TS (`backend/`), REST `/api/v1`. Steps 1–8 done; no publishing/domains unless asked. Minimal diffs; never commit `.env`.

@@ -1,0 +1,13 @@
+---
+description: Next.js frontend conventions for Safnom
+globs: frontend/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend
+
+- App Router under `frontend/app/`.
+- Use Tailwind for styling.
+- Call the backend only through `frontend/services/api.ts` (base URL from `NEXT_PUBLIC_API_URL`).
+- Shared API types in `frontend/types/`.
+- Do not hardcode `http://localhost:5000` in components.

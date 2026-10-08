@@ -1,0 +1,9 @@
+---
+description: Step plans — one folder at a time
+globs: project/plan/**/*.md
+alwaysApply: false
+---
+
+# Plans
+
+Use `project/plan/README.md` as the index. Open only the step folder for the current task; do not bulk-read every step. Edit plan markdown only when the user asks.
